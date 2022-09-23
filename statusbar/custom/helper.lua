@@ -160,9 +160,15 @@ local update_tags = function(self, c3)
 
 	if c3.selected then
     tagicon.markup = '<span color="'.. gmc.color["blue300"] ..'">' .. " \u{f192} " .. '</span>'
-	else
+  elseif #c3:clients() > 0  then
+    tagicon.markup = '<span color="'.. gmc.color["blue300"] ..'">' .. " \u{f058} " .. '</span>'
+  else
     tagicon.markup = '<span color="'.. gmc.color["blue300"] ..'">' .. " \u{f111} " .. '</span>'
 	end
+
+  c3:connect_signal('property::urgent', function ()
+    tagicon.markup = '<span color="'.. gmc.color["blue300"] ..'">' .. " \u{f06a} " .. '</span>'
+  end)
 
   self:connect_signal('mouse::enter', function()
     if c3.selected == false then

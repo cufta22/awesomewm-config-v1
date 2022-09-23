@@ -20,7 +20,6 @@
     ``` shell
     sudo pacman -S awesome
     ```
-    **[For all users](https://github.com/awesomeWM/awesome/#building-and-installation)**
 
 2. install softwares
 
