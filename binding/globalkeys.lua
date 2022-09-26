@@ -158,13 +158,25 @@ function _M.get()
     -- Brightness
     awful.key({}, 'XF86MonBrightnessUp',
         function() awful.spawn('brightnessctl s +10%') end,
-        {description = '+10%', group = 'hotkeys'}),
+        {description = '+10% brightness', group = 'hotkeys'}),
     awful.key({}, 'XF86MonBrightnessDown',
         function() awful.spawn('brightnessctl s 10%-') end,
-        {description = '-10%', group = 'hotkeys'}),
+        {description = '-10% brightness', group = 'hotkeys'}),
     awful.key({modkey, }, 'XF86MonBrightnessDown',
         function() awful.spawn('brightnessctl s 5%') end, -- Very low for night
-        {description = '-5%', group = 'hotkeys'})
+        {description = '5% brightness', group = 'hotkeys'}),
+
+    --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+    -- Sound
+    awful.key({}, 'XF86AudioRaiseVolume',
+        function() awful.spawn('pulseaudio-ctl up') end,
+        {description = '+5% volume', group = 'hotkeys'}),
+    awful.key({}, 'XF86AudioLowerVolume',
+        function() awful.spawn('pulseaudio-ctl down') end,
+        {description = '-5% volume', group = 'hotkeys'}),
+    awful.key({}, 'XF86AudioMute',
+        function() awful.spawn('pulseaudio-ctl mute') end, -- Very low for night
+        {description = 'mute volume', group = 'hotkeys'})
   )
 
   return globalkeys

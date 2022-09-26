@@ -171,12 +171,12 @@ local update_tags = function(self, c3)
   end)
 
   self:connect_signal('mouse::enter', function()
-    if c3.selected == false then
+    if c3.selected == false and #c3:clients() < 1 then
       tagicon.markup = '<span color="'.. gmc.color["blue300"] ..'">' .. " \u{f057} " .. '</span>'
     end
   end)
   self:connect_signal('mouse::leave', function()
-      if c3.selected == false then
+      if c3.selected == false and #c3:clients() < 1 then
         tagicon.markup = '<span color="'.. gmc.color["blue300"] ..'">' .. " \u{f111} " .. '</span>'
       end
   end)

@@ -99,9 +99,4 @@ awful.rules.rules = main.rules(
 require("main.signals")
 
 -- Autostart applications
-
-awful.spawn.with_shell("picom")                -- Compositor
-awful.spawn.with_shell("nm-applet")            -- NetworkManager
-awful.spawn.with_shell("flameshot")            -- Screenshot tool
-awful.spawn.with_shell("nitrogen --restore")   -- Nitrogen wallpapers
-awful.spawn.with_shell("pasystray")            -- PulseAudio
+require("main.autostart")
