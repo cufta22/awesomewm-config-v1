@@ -128,7 +128,7 @@ function WB.add_widgets_right (s)
     -- Systray
     WB.spacer,
     wibox.container.margin(
-      wibox.widget { wibox.widget.systray(), layout = wibox.layout.fixed.horizontal},
+      wibox.widget { wibox.widget.systray(), layout = wibox.layout.fixed.horizontal },
       0,
       0,
       dpi(4),
@@ -254,6 +254,7 @@ function WB.generate_wibox (s)
     shape     = utils.rrect(beautiful.rounded),
   })
 
+  -- s.wibox.y = s.geometry.height - beautiful.useless_gap - dpi(30)
   s.wibox.y = beautiful.useless_gap
 
   -- Add widgets to the wibox

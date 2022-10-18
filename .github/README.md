@@ -27,9 +27,9 @@
 
     ```shell
    
-    sudo pacman -S lxappearance rofi thunar brightnessctl papirus-icon-theme ttf-roboto ttf-font-awesome catppuccin-gtk-theme xfce4-power-manager
+    sudo pacman -S lxappearance lxsession rofi thunar brightnessctl papirus-icon-theme ttf-roboto ttf-font-awesome catppuccin-gtk-theme xfce4-power-manager
 
-    yay -S picom-jonaburg-git i3lock-fancy-git lain-git
+    yay -S picom-jonaburg-git i3lock-fancy-git lain-git pulseaudio-ctl
    
     ```
 

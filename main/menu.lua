@@ -35,7 +35,7 @@ function _M.get()
     { "favorite", M.favorite },
     { "terminal", RC.vars.terminal },
     { "logout", "pkill -KILL -u " .. RC.vars.username },
-    { "shutdown", "shotdown now" },
+    { "shutdown", "shutdown now" },
 
   }
 
